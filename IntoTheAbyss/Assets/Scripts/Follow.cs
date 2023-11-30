@@ -9,6 +9,8 @@ public class Follow : MonoBehaviour
     public GameObject Enemy;
     public float speed;
     public Transform Cass; 
+    [SerializeField] private bool isFollowing = true;
+
 
 
 
@@ -22,10 +24,22 @@ public class Follow : MonoBehaviour
     void Update()
     {
         GameObject enemyObject = GameObject.FindWithTag("Enemy");
-        Enemy.transform.position = Vector3.MoveTowards(Enemy.transform.position, Player.transform.position, speed);       
         Transform enemyTransform = enemyObject.transform;
         enemyTransform.Translate(Vector3.forward * Time.deltaTime * speed);
         transform.LookAt(Cass);
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+
+         if(Input.GetKeyDown(KeyCode.P)){
+
+            if(!isFollowing){
+                isFollowing=true;
+            }
+            else{
+                isFollowing=false;
+            }
+        }
+        if(isFollowing){
+                    Enemy.transform.position = Vector3.MoveTowards(Enemy.transform.position, Player.transform.position, speed);        
+        }
     }
 }
