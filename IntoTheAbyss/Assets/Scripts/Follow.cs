@@ -8,6 +8,7 @@ public class Follow : MonoBehaviour
     public GameObject Player;
     public GameObject Enemy;
     public float speed;
+    public Transform Cass; 
 
 
 
@@ -20,7 +21,11 @@ public class Follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Enemy.transform.position = Vector3.MoveTowards(Enemy.transform.position, Player.transform.position, speed);        
-
+        GameObject enemyObject = GameObject.FindWithTag("Enemy");
+        Enemy.transform.position = Vector3.MoveTowards(Enemy.transform.position, Player.transform.position, speed);       
+        Transform enemyTransform = enemyObject.transform;
+        enemyTransform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.LookAt(Cass);
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
     }
 }
