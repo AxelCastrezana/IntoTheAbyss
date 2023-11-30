@@ -28,5 +28,9 @@ public class CharacterMovement : MonoBehaviour
         anim.SetFloat("VelX", x);        
         anim.SetFloat("VelY", y);
         
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            
+        }
     }
 }
