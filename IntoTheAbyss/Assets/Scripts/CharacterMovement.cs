@@ -30,7 +30,7 @@ public class CharacterMovement : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            
+            anim.SetTrigger("Aim");
         }
     }
 }
