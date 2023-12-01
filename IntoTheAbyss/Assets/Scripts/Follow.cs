@@ -10,14 +10,36 @@ public class Follow : MonoBehaviour
     public float speed;
     public Transform Cass; 
     [SerializeField] private bool isFollowing = true;
+    public Transform player;
+
+    private bool shouldFollow = false;
 
 
+private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Player entered the trigger zone
+            AttackPlayer();
+        }
+    }
+     private void AttackPlayer()
+    {
+        // Assuming the enemy has a script/component to handle attacks
+        EnemyAttack enemyAttack = Enemy.GetComponent<EnemyAttack>();
+
+        if (enemyAttack != null)
+        {
+            // Trigger the enemy's attack
+            enemyAttack.Attack();
+        }
+    }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
