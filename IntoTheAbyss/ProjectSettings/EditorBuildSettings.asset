@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheWoodsScene.unity
     guid: 4c8bf0f94d32dd64d9fa3b05dae93dc3
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: ec69571fea06d724d820cc73861d0d7b
   m_configObjects: {}
