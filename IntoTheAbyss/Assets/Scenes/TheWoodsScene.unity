@@ -3563,11 +3563,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f0d905d5b6964c04798abbfa5c754fbc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 563.7517
+      value: 563.76
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0d905d5b6964c04798abbfa5c754fbc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.599644
+      value: 16.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0d905d5b6964c04798abbfa5c754fbc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3652,6 +3652,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f0d905d5b6964c04798abbfa5c754fbc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1796627097}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f0d905d5b6964c04798abbfa5c754fbc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1796627098}
   m_SourcePrefab: {fileID: 100100000, guid: f0d905d5b6964c04798abbfa5c754fbc, type: 3}
 --- !u!1001 &99208437
 PrefabInstance:
@@ -34962,6 +34965,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &789518821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789518811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017cec08bf1f297489539d25c22ed177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!1001 &795466435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64745,6 +64761,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3595625012628118935, guid: 156ea8d7801e10143a361335f8615ae7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 789518820}
+    - targetCorrespondingSourceObject: {fileID: 3595625012628118935, guid: 156ea8d7801e10143a361335f8615ae7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 789518821}
     - targetCorrespondingSourceObject: {fileID: 8347429517488258443, guid: 156ea8d7801e10143a361335f8615ae7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 233234869}
@@ -76043,6 +76062,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1796627098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796627086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4d2d45af694e6c4099b2d007fa609b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4048787075556773135, guid: 6b081f0492af541468a120620412243c, type: 3}
+  firePoint: {fileID: 1796627089}
+  bulletSpeed: 10
+  damage: 10
 --- !u!1001 &1797627399
 PrefabInstance:
   m_ObjectHideFlags: 0
